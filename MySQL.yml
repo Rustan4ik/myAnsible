@@ -1,0 +1,14 @@
+---
+- name: Create MySQL BD 
+mysql_db: 
+name: "name_base" 
+state: present
+
+- name: Create MySQL user
+mysql_user: 
+login_user: root
+login_password: "password" 
+name: "username" 
+password : "password" 
+priv : "name_base.*:ALL" 
+host: "127.0.0.1"
